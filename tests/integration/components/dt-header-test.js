@@ -6,19 +6,24 @@ moduleForComponent('dt-header', 'Integration | Component | dt header', {
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{dt-header}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  var $component = this.$();
 
-  // Template block usage:
-  this.render(hbs`
-    {{#dt-header}}
-      template block text
-    {{/dt-header}}
-  `);
+  assert.ok(!!($component.find('.dt-header').length), 'Header found');
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  var $navigation = $component.find('.navigation');
+  assert.ok(!!$navigation.length, 'Main navigation');
+  assert.equal($navigation.find('li').length, 4, 'Only 4 main nav links');
+  assert.ok(!!($navigation.find('.home').length), 'Home link');
+  assert.ok(!!($navigation.find('.posiciones').length), 'Posiciones link');
+  assert.ok(!!($navigation.find('.reglamento').length), 'Reglamento link');
+  assert.ok(!!($navigation.find('.acerca').length), 'Acerca de link');
+
+  var $social = $component.find('.social');
+  assert.ok(!!$social.length, 'Social navigation');
+  assert.equal($social.find('li').length, 2, 'Only 2 social links');
+  assert.ok(!!($social.find('.facebook').length), 'Facebook link');
+  assert.ok(!!($social.find('.twitter').length), 'Twitter link');
 });
