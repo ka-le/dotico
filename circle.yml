@@ -1,7 +1,11 @@
 machine:
   node:
     version: 6.2.2
-
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: doticos-v2
 dependencies:
   post:
     - npm install -g bower
