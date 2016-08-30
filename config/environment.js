@@ -16,8 +16,24 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    googleFonts: [
+      'Open+Sans:400,700',
+      'Montserrat:400,700'
+    ],
+
+    // Set or update content security policies
+    contentSecurityPolicy: {
+      'font-src': "'self' fonts.gstatic.com",
+      'style-src': "'self' fonts.googleapis.com"
     }
   };
+
+  // Social URLS
+  ENV.SOCIAL = {
+    FACEBOOK: 'https://www.facebook.com/groups/dotacr',
+    TWITTER: 'https://twitter.com/doticos'
+  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
