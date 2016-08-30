@@ -11,6 +11,3 @@ dependencies:
     - npm install -g bower
     - bower install
     - npm rebuild node-sass
-test:
-  override:
-    - echo "test"
