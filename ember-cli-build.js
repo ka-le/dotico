@@ -25,5 +25,20 @@ module.exports = function(defaults) {
     production:  'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'
   });
 
+  app.import({
+    development: 'bower_components/datatables.net/js/jquery.dataTables.js',
+    production: 'bower_components/datatables.net/js/jquery.dataTables.min.js',
+  });
+
+  app.import({
+    development: 'bower_components/datatables.net-bs/js/dataTables.bootstrap.js',
+    production: 'bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js',
+  });
+
+  app.import({
+    development: 'bower_components/datatables.net-bs/css/dataTables.bootstrap.css',
+    production: 'bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css',
+  });
+
   return app.toTree();
 };
