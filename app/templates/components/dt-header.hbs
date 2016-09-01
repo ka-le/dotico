@@ -1,37 +1,48 @@
 <!-- Start Header -->
-<header id="header" class="second-version">
-  <div class="container">
-    <div class="header-logo">
-      <a href="/"><img src="assets/logo.png" alt=""></a>
-      <div class="triangle-left"></div>
-      <div class="triangle-right"></div>
-    </div>
-  </div>
-  <div class="header-toolbar">
+<header>
+  <div class="header-toolbar text-uppercase not-supported">
     <div class="container">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="header-user pull-right">
-          <ul class="custom-list">
-            <li>
-              <div class="header-user-forms">
-                <div class="header-login">
-                  <a href="#" class="">Login</a>
-                </div>
-                <div class="header-register">
-                  <a href="#" class="">Register</a>
-                </div>
+      <div class="header-user pull-right">
+        <ul>
+          <li>
+            <div class="header-user">
+              <div class="header-login">
+                <a href="#" class="">Login</a>
               </div>
-            </li>
-          </ul>
-        </div>
+              <div class="header-register">
+                <a href="#" class="">Register</a>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-  <div class="header-navbar">
-    <div class="container">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <nav class="navigation">
-          <ul class="list-inline text-center custom-list">
+  <div class="container">
+    <div class="header-logo">
+      <a href="/">
+        <img class="img-responsive" src="assets/logo.png" alt="doticos logo">
+      </a>
+      <div class="triangle-left"></div>
+      <div class="triangle-right"></div>
+    </div>
+    <nav class="navbar navbar-inverse main-navbar text-uppercase">
+      <div class="container-fluid">
+        <ul class="social list-inline pull-right">
+          {{#each socialNavOptions as |opt|}}
+            <li class="{{opt.class}}"><a href="{{opt.url}}">{{fa-icon opt.icon}}</a></li>
+          {{/each}}
+        </ul>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <i class="fa fa-list"></i>
+          </button>
+          <a class="navbar-brand" href="/">
+            <img class="img-responsive" src="assets/logo.png" alt="doticos logo">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse text-center" id="navbar">
+          <ul class="nav navbar-nav">
             {{#each navigationOptions as |opt|}}
               <li class="{{opt.class}}">
                 {{#link-to opt.route}}
@@ -40,17 +51,8 @@
               </li>
             {{/each}}
           </ul>
-        </nav>
-        <ul class="social list-inline">
-          {{#each socialNavOptions as |opt|}}
-            <li class="{{opt.class}}"><a href="{{opt.url}}">{{fa-icon opt.icon}}</a></li>
-          {{/each}}
-        </ul>
-        <button class="navbar-toggle">
-          <i class="fa fa-list"></i>
-        </button>
+        </div>
       </div>
-    </div>
+    </nav>
   </div>
 </header>
-<!-- End Header -->
