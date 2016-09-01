@@ -1,5 +1,5 @@
-import Ember from 'ember';
-import ENV from '../config/environment';
+import Ember from 'ember'
+import ENV from '../config/environment'
 
 export default Ember.Component.extend({
   classNames: ['dt-header'],
@@ -37,4 +37,4 @@ export default Ember.Component.extend({
       url: ENV.SOCIAL.TWITTER
     }
   ]
-});
+})

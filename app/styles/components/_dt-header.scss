@@ -1,0 +1,137 @@
+.dt-header {
+  header {
+    background: rgba(42, 52, 68, 0.9);
+    .container {
+      position: relative;
+    }
+  }
+  .header-toolbar {
+    padding: 9px 0;
+    background: rgba(17, 21, 27, 0.9);
+    a {
+      color: rgba(255, 255, 255, 0.5);
+      font-family: 'open sans';
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+    a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+    .header-user > div {
+      padding-left: 2px;
+      margin-left: 2px;
+      float: left;
+      z-index: 9999;
+    }
+    .header-user > div:before {
+      margin-right: 2px;
+      content: "/";
+    }
+    .header-user > div.header-login:before {
+      content: none;
+    }
+  }
+  .main-navbar{
+    background: transparent;
+    border: 0;
+    padding: 10px 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    .navbar-brand {
+      padding: 0px;
+      >img {
+        height: 140%;
+        padding: 0 25px;
+        margin-top: -8px;
+        width: auto;
+      }
+    }
+    @media (min-width: 768px) {
+      .navbar-brand {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .navbar .navbar-nav {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+      text-align: center;
+    }
+  }
+
+  .header-logo {
+    position: absolute;
+    padding: 20px 13px;
+    top: 0;
+    left: 50px;
+    background: #e72f29;
+    z-index: 999;
+    @media (max-width: 767px) {
+      display: none;
+    }
+    .triangle-left {
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 18px 58px 0 0;
+      border-color: #e72f29 transparent transparent;
+    }
+    .triangle-right {
+      position: absolute;
+      bottom: -18px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 58px 18px 0;
+      border-color: transparent #e72f29 transparent;
+    }
+  }
+
+  .social {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    padding: 0 10px;
+    li {
+      padding: 0;
+      margin-top: calc(50% - 10px);
+      margin-left: 5px;
+      a {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        i {
+          color: #fff;
+        }
+      }
+      a:hover {
+        border: 1px solid rgba(255, 255, 255, 0.7);
+      }
+    }
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .social {
+      right: 55px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<table class="datatable table table-striped">
+  <thead>
+    <tr>
+      {{#each headers as |h|}}
+        <th class="{{h.title}}">
+          <div>{{h.title}}</div>
+        </th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each objects as |o|}}
+      <tr>
+        {{#each headers as |h|}}
+          <td class="{{h.title}}">
+            {{get o h.name}}
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

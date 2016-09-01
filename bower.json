@@ -5,6 +5,9 @@
     "ember-cli-shims": "0.1.1",
     "ember-qunit-notifications": "0.1.0",
     "bootstrap-sass": "^3.3.7",
-    "font-awesome": "~4.5.0"
+    "font-awesome": "~4.5.0",
+    "datatables.net": "^1.10.12",
+    "datatables.net-bs": "^1.10.12",
+    "datatables.net-dt": "^1.10.12"
   }
 }

@@ -1,0 +1,25 @@
+.dt-datatable .datatable {
+  thead th {
+    position: relative;
+    background-image: none !important;
+    &.sorting:after,
+    &.sorting_asc:after,
+    &.sorting_desc:after {
+        position: absolute;
+        top: 12px;
+        right: 8px;
+        display: block;
+        font-family: FontAwesome;
+    }
+    &.sorting:after {
+        content: "\f0dc";
+        opacity: 0.6;
+    }
+    &.sorting_asc:after {
+        content: "\f0de";
+    }
+    &.sorting_desc:after {
+        content: "\f0dd";
+    }
+  }
+}
