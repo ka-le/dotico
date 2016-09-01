@@ -13,7 +13,7 @@ test('it renders', function(assert) {
 
   assert.ok(!!($component.find('.dt-header').length), 'Header found');
 
-  var $navigation = $component.find('.navigation');
+  var $navigation = $component.find('.nav');
   assert.ok(!!$navigation.length, 'Main navigation');
   assert.equal($navigation.find('li').length, 4, 'Only 4 main nav links');
   assert.ok(!!($navigation.find('.home').length), 'Home link');
